@@ -1,5 +1,5 @@
 {
-  "name": "coffeescript-style-guide",
+  "name": "clever-coffeescript-style-guide",
   "version": "0.2.0",
   "description": "Configuration and script to lint coffeescript",
   "engines": {
@@ -24,8 +24,5 @@
   },
   "bin": {
     "lint": "run.sh"
-  },
-  "publishConfig": {
-    "registry": "https://clever.registry.nodejitsu.com"
   }
 }
