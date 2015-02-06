@@ -23,5 +23,4 @@ publish:
     email: {{npm_drone_email}}
     username: {{npm_drone_username}}
     password: {{npm_drone_password}}
-    registry: "https://clever.registry.nodejitsu.com"
     branch: master
