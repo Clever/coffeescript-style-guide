@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-dir='node_modules/coffeescript-style-guide/'
+dir='node_modules/clever-coffeescript-style-guide/'
 coffeelint=$dir'node_modules/.bin/coffeelint'
 coffeejshint=$dir'node_modules/.bin/coffee-jshint'
 exit_code=0
