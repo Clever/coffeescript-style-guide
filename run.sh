@@ -32,8 +32,12 @@ for file in $files; do
   $coffeelint -f $dir'coffeelint-config.json' $file ; update_exit $? 0
 
   # coffee-jshint
+  # Test files
   echo $file | egrep '^test/' | xargs $coffeejshint -o node,mocha,evil ; update_exit $? 0
-  echo $file | egrep -v '^test/' | xargs $coffeejshint -o node,evil ; update_exit $? 0
+  # Frontend files
+  echo $file | egrep 'assets/' | xargs $coffeejshint -o browser ; update_exit $? 0
+  # Non test non frontend files
+  echo $file | egrep -v '^test/' | egrep -v 'assets/' | xargs $coffeejshint -o node,evil ; update_exit $? 0
 
   # it.only, describe.only etc in test
   line=`echo $file | egrep '^test/' | xargs egrep -nv '^ *#' | egrep \(it\|describe\).\(only\|skip\)`
