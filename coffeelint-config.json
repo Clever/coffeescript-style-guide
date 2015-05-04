@@ -100,5 +100,9 @@
     "non_empty_constructor_needs_parens": {
         "name": "non_empty_constructor_needs_parens",
         "level": "ignore"
+    },
+    "prefer_english_operator": {
+        "name": "prefer_english_operator",
+        "level": "error"
     }
 }
